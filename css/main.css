@@ -1,0 +1,262 @@
+    /* google fonts */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital@1&display=swap');
+
+/* all varables */
+
+:root {
+    --blue: rgb(0, 123, 255);
+    --blue-dark: rgb(6, 77, 153);
+    --yellow: rgb(255, 193, 7);
+    --yellow-dark: rgb(175, 134, 10);
+    --green: rgb(40, 167, 69);
+    --green-dark: rgb(26, 110, 45);
+    --red: rgb(220, 53, 69);
+    --red-dark: rgb(143, 29, 41);
+    --white: rgb(255, 255, 255);
+    --gray: rgb(146, 140, 140);
+    --default-font-size: 16px;
+    --container-width: 1280px;
+}
+
+
+/* all */
+
+html {
+    font-size: var(--default-font-size);
+}
+
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+
+/* header */
+
+.header__dark {
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(51, 57, 64);
+    color: rgb(236, 236, 236);
+    align-items: center;
+    color: var(--white);
+}
+
+.header__title {
+    font-size: 1.25rem;
+}
+
+.header__search {
+    display: inline;
+    font-size: 1.2rem;
+}
+
+
+/* search */
+
+.search__input {
+    box-sizing: border-box;
+    border-radius: 4px 0 0 4px;
+    font-size: 1.4rem;
+    padding: .375rem .75rem;
+    margin-right: 0;
+    border: 1px solid black;
+    transition: border .15s;
+}
+
+.search__input:hover {
+    border: 1px solid rgb(128, 189, 255);
+}
+
+.search__btn {
+    background-color: rgb(0, 123, 255);
+    font-size: 1.2rem;
+    border-radius: 0 4px 4px 0;
+    margin-left: 0;
+    position: relative;
+    left: -15px;
+}
+
+
+/* main > aside > nav*/
+
+.main {
+    display: flex;
+}
+
+.main__aside {
+    flex-basis: 25vw;
+    margin: 0;
+    padding: 0;
+    font-size: 1rem;
+}
+
+.main__nav {
+    flex-direction: column;
+    background-color: rgb(33, 37, 41);
+    color: var(--gray);
+}
+
+.content {
+    flex-direction: row;
+}
+
+.nav__ul {
+    margin-top: 0;
+    font-size: .7rem;
+    list-style: none;
+    padding: 2.5rem;
+}
+
+@media(min-width: 700px) {
+    .nav__ul {
+        padding: 1rem;
+    }
+}
+
+.nav__ul li {
+    font-size: .8rem;
+    margin-bottom: 2rem;
+}
+
+.nav__ul li a {
+    color: var(--gray);
+    text-decoration: none;
+    display: none;
+}
+
+@media(min-width: 700px) {
+    .nav__ul li a {
+        display: inline;
+        flex-basis: 10vw;
+        padding: 0;
+    }
+}
+
+.nav__ul a:hover {
+    color: var(--white);
+}
+
+.nav__ul li i:hover {
+    color: var(--white);
+}
+
+.nav__a {
+    color: white;
+    text-decoration: none;
+    display: inline;
+    margin: 1rem;
+}
+
+.nav__items {
+    margin: 1rem auto;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    flex-flow: wrap;
+    flex: 0 1 auto;
+    align-items: center;
+}
+
+
+/* section - content */
+
+.main__breadcrumb {
+    background-color: rgb(233, 236, 239);
+    border-radius: .25rem;
+    padding: 1rem 1.5rem;
+    display: block;
+}
+
+
+/* content */
+
+.content {
+    flex-basis: 75vw;
+}
+
+
+/*  cards */
+
+.fa {
+    margin: .5rem;
+}
+
+.card__top {
+    border-radius: .25rem .25rem 0 0;
+}
+
+.card__bottom {
+    border-radius: 0 0 .25rem .25rem;
+}
+
+.main__card--blue {
+    background-color: var(--blue);
+    transition: background-color .3s;
+}
+
+.main__card--blue:hover {
+    background-color: var(--blue-dark);
+}
+
+.main__card--yellow {
+    background-color: var(--yellow);
+    transition: background-color .3s;
+}
+
+.main__card--yellow:hover {
+    background-color: var(--yellow-dark);
+}
+
+.main__card--green {
+    background-color: var(--green);
+    transition: background-color .3s;
+}
+
+.main__card--green:hover {
+    background-color: var(--green-dark);
+}
+
+.main__card--red {
+    background-color: var(--red);
+    transition: background-color .3s;
+}
+
+.main__card--red:hover {
+    background-color: var(--red-dark);
+}
+
+.main__cards {
+    display: flex;
+    flex-direction: row;
+    flex-flow: wrap;
+    flex: 0 1 auto;
+    position: relative;
+    margin: 0 0px;
+}
+
+.main__card {
+    position: relative;
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding: 1rem;
+    border-radius: 5px;
+    margin: .1rem;
+    color: var(--white);
+}
+
+@media(min-width: 700px) {
+    .main__card {
+        flex: 0 0 20%;
+        max-width: 20%;
+        margin: .7rem;
+    }
+    .card__bottom {
+        font-size: .6rem;
+        margin-top: 1rem;
+    }

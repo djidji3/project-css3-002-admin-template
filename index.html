@@ -6,140 +6,64 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/font-awesome-4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="/css/main.css">
-    <title>Document</title>
-    <style>
-        /* all varables */
-        
-         :root {
-            --blue: rgb(0, 123, 255);
-            --yellow: rgb(255, 193, 7);
-            --green: rgb(40, 167, 69);
-            --red: rgb(220, 53, 69);
-            --white: rgb(255, 255, 255);
-            --default-font-size: 16px;
-            --container-width: 1280px;
-        }
-        /* all */
-        
-        html {
-            font-size: var(--default-font-size);
-        }
-        
-        body {
-            margin: 0;
-            font-family: Arial, Helvetica, sans-serif;
-        }
-        
-        * {
-            box-sizing: border-box;
-        }
-        /* header */
-        
-        .header__dark {
-            background-color: rgb(51, 57, 64);
-            color: rgb(236, 236, 236);
-        }
-        
-        .header__title {
-            display: inline;
-            font-size: 1.25rem;
-        }
-        
-        .header__search {
-            display: inline;
-        }
-        /* search */
-        
-        .search__input {
-            border-radius: 4px 0 0 4px;
-            padding: .375rem .75rem;
-            font-size: 1.2rem;
-        }
-        
-        .search__btn {
-            background-color: rgb(0, 123, 255);
-            padding: .375rem .75rem;
-            font-size: 1.2rem;
-            border-radius: 0 10px 10px 0;
-        }
-        /* main > aside > nav*/
-        
-        .main__nav {
-            background-color: rgb(33, 37, 41);
-            color: white;
-        }
-        
-        .nav__ul {
-            margin-top: 0;
-        }
-        
-        .nav__a {
-            color: white;
-        }
-        /* section */
-        
-        .main__breadcrumb {
-            background-color: rgb(233, 236, 239);
-            border-radius: .25rem;
-            padding: 1rem 1.5rem;
-        }
-        
-        .card__top {
-            border-radius: .25rem .25rem 0 0;
-        }
-        
-        .card__bottom {
-            border-radius: 0 0 .25rem .25rem;
-        }
-        
-        .main__card--blue {
-            background-color: var(--blue);
-        }
-        
-        .main__card--yellow {
-            background-color: var(--yellow);
-        }
-        
-        .main__card--green {
-            background-color: var(--green);
-        }
-        
-        .main__card--red {
-            background-color: var(--red);
-        }
-    </style>
+    <title>Admin Page</title>
+
 </head>
-<!-- header -->
+
 <header class="header__dark">
     <h3 class="header__title">
-        Admin Page
+        Admin Page <i class="fa fa-bars" aria-hidden="true"></i>
     </h3>
     <div class="header__search">
         <input class="search__input" type="text" placeholder="Search for...">
         <button class="search__btn"><i class="fa fa-search" aria-hidden="true"></i></button>
+        <i class="fa fa-user-o" aria-hidden="true"></i>
+        <i class="fa fa-sort-desc" aria-hidden="true"></i>
     </div>
-
 </header>
-<!-- /header -->
 
-<!-- main -->
-<main>
-    <aside>
+
+
+<main class="main">
+
+    <aside class="main__aside">
         <nav class="main__nav">
             <ul class="nav__ul">
+
                 <li>
-                    <header>CORE</header>
-                    <a class="nav__a" href=""><i class="fa fa-tachometer" aria-hidden="true"></i> Dashboard</a>
-                    <header>INTERFACE</header>
-                    <a class="nav__a" href=""><i class="fa fa-windows" aria-hidden="true"></i>Layouts</a>
-                    <a class="nav__a" href=""><i class="fa fa-bookmark" aria-hidden="true"></i>Pages</a>
-                    <header>ADDONS</header>
-                    <a class="nav__a" href=""><i class="fa fa-area-chart" aria-hidden="true"></i></i>Charts</a>
-                    <a class="nav__a" href=""><i class="fa fa-table" aria-hidden="true"></i>Tables</a>
+                    <a href="">CORE</a>
                 </li>
+                <li>
+                    <i class="fa fa-tachometer" aria-hidden="true"></i>
+                    <a href="">Dashboard</a>
+                </li>
+                <li>
+                    <a href="">INTERFACE</a>
+                </li>
+                <li>
+                    <i class="fa fa-windows" aria-hidden="true"></i>
+                    <a href="">Layouts</a>
+                </li>
+                <li>
+                    <i class="fa fa-bookmark" aria-hidden="true"></i>
+                    <a href="">Pages</a>
+                </li>
+                <li>
+                    <a href="">ADDONS</a>
+                </li>
+                <li>
+                    <i class="fa fa-area-chart" aria-hidden="true"></i>
+                    <a href="">Charts</a>
+                </li>
+                <li>
+                    <i class="fa fa-table" aria-hidden="true"></i>
+                    <a href="">Tables</a>
+                </li>
+
             </ul>
         </nav>
     </aside>
+
     <section class="content">
         <h1>Dashboard</h1>
         <div class="main__breadcrumb">Dashboard</div>
@@ -147,7 +71,7 @@
 
             <div class="main__card main__card--blue">
                 <div class="card__top">Primary Card</div>
-                <div class="card__bottom">View Details ></div>
+                <div class="card__bottom">View Details > </div>
             </div>
 
             <div class="main__card main__card--yellow">
@@ -173,7 +97,6 @@
 
 
 </main>
-<!-- /main -->
 
 
 <body>
